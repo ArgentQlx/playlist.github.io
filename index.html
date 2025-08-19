@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your own playlist</title>
+    <link rel="stylesheet" href="folders_style.css">
+    <link rel="stylesheet" href="player_style.css">
+    <link rel="shortcut icon" href="player_logo.png" type="image/x-icon">
+    <script src="folders.js" defer></script>
+    <script src="player.js" defer></script>
+    <script src="indexedDb.js" defer></script>
+    <script src="main_logic.js" defer></script>
+</head>
+
+<body>
+    <div class="hide" id="loading">
+        <div class="loading">
+            <img src="5.gif" alt="Loading GIF">
+            <p>loading...</p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="hide" id="alert">
+            <div>
+                <span>Attention</span>
+                <button id="delAlert">X</button>
+            </div>
+            <p id="alertTitle">File has no chosen or you're trying add the track to the start page</p>
+        </div>
+        <aside id="aside">
+            <div id="start">
+                <button id="startButton">Start Page</button>
+            </div>
+        </aside>
+        <div id="main">
+            <nav>
+                <div class="droppedBtn">
+                    <button id="create">Create folder</button>
+                    <div class="hide" id="confirm">
+                        <input type="text" id="folderInput" placeholder="Enter the folder name" tabindex="-1">
+                        <button id="nameConfirm">Create</button>
+                    </div>
+                </div>
+                <button id="choose" class="disabled">Choose the file</button>
+                <div class="hide">
+                    <input type="file" id="fileInp" accept=".mp3">
+                </div>
+            </nav>
+            <div class="currentFolder" id="startFolder">
+                <span>This is a start page</span>
+                <p> My attempt to create a music playlist and my first expirience with files and
+                    folders :) <br> ► Creator: <a href="https://t.me/gd_4ever" target="_blank">@gd_4ever</a> 
+                    <br> ► My channel: <a href="https://t.me/beginners_but" target="_blank">@beginners_but</a>
+                    <br> ► Thanks for idea: <a href="https://t.me/teatteaa" target="_blank">@teatteaa</a> 
+                    <br> ► Special thanks: <a href="https://t.me/MerchantArm" target="_blank">@MerchantArm</a> 
+                    <br> ▽▽ Player template: ↓↓↓
+                </p>
+                <div class="customAudio">
+                    <button class="goBack">◄◄</button>
+                    <button class="start">▶</button>
+                    <button class="goForw">►►</button>
+                    <button class="reset">◼</button>
+                    <div class="progress">
+                        <input type="range" class="progress" value="0" min="0" max="100">
+                        <span>Test track name</span>
+                    </div>
+                    <span class="time">00:00 <br> 00:00
+                    </span>
+                    <div class="volume">
+                        <input type="range" value="50" min="0" max="100">
+                        <span>Volume</span>
+                    </div>
+                    <button class="delete">X</button>
+                </div>
+                <p>Enjoy</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

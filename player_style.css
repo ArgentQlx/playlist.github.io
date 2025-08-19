@@ -1,0 +1,77 @@
+:root {
+    --bask_play_color: var(--hover_col);
+    --main_play_col: var(--main_col);
+}
+
+.customAudio {
+    display: flex;
+    background-color: var(--main_play_col);
+    width: 70%;
+    gap: 7px;
+    padding: 10px;
+    border: var(--back_col) solid 3px;
+    border-radius: 20px;
+}
+
+.customAudio input {
+    align-self: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0px 10px 0px 10px;
+    width: 100%;
+    height: 8px;
+    background: rgb(250, 119, 119);
+    border-radius: 6px;
+}
+.customAudio input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: var(--bask_play_color);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.customAudio input::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+}
+
+
+.customAudio span {
+    font-size: 16px;
+    text-align: center;
+    color: var(--main_play_col);
+    background-color: var(--bask_play_color);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.customAudio button {
+    color: var(--main_play_col);
+    background-color: var(--bask_play_color);
+    border-radius: 10px;
+    text-align: center;
+    padding: 0px 7px 0px 7px;
+    transition: .3s;
+}
+
+.customAudio button:hover {
+    cursor: pointer;
+    background-color: var(--main_play_col);
+    border: 2px solid var(--bask_play_color);
+    color: var(--bask_play_color);
+}
+
+.customAudio .progress {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.customAudio .volume {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-self: center;
+}

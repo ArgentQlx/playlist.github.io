@@ -1,0 +1,251 @@
+:root {
+    --back_col: rgb(243, 103, 103);
+    --main_col: #1a303f;
+    --main_focus: #28505c;
+    --hover_col: #e6d6c1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+    user-select: none;
+    -webkit-user-select: none;
+}
+body {
+    height: 100vh;
+}
+nav {
+    display: flex;
+    z-index: 3;
+    background-color: var(--back_col);
+    border-bottom: 2px solid var(--main_col);
+    height: 7vh;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    background-color: var(--back_col);
+}
+
+nav button {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: #d8b29a;
+}
+
+aside {
+    width: 20vh;
+    height: 100vh;
+    background-color: var(--back_col);
+    padding-top: 7vh;
+}
+
+aside button {
+    width: 100%;
+}
+
+nav input, aside input {
+    text-align: center;
+}
+
+.chooseBtn {
+    background-color: #fff;
+    width: 20%;
+    transition: .3s;
+}
+
+.droppedBtn {
+    background-color: #fff;
+    width: 20%;
+    height: 100%;
+}
+.choose {
+    height: 100%;
+    width: 20%;
+}
+.droppedBtn button {
+    width: 100%;
+}
+
+nav button, aside button {
+    color: #fff;
+    background-color: var(--main_col);
+    min-height: 60px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+nav button:hover, aside button:hover {
+    background-color: var(--back_col);
+    border: #fff solid 2px;
+    color: #fff;
+    font-size: 20px;
+}
+
+aside button:focus {
+    background-color: var(--main_focus);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.foldMenu button {
+    background-color: #607d7e
+}
+
+.btnContent {
+    width: 100%;
+}
+
+.foldMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 15px;
+    z-index: 2;
+    height: 75px;
+    border-top: 7px solid var(--main_col);
+    background-color: #130d0d;
+}
+
+.currentFolder {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--hover_col);
+    border-radius: 5px;
+    margin: 25px;
+    gap: 15px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.currentFolder p, .currentFolder span {
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--back_col);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.currentFolder p a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: .4s;
+}
+.currentFolder p a:hover {
+    color: var(--main_col);
+    text-decoration: underline;
+}
+.currentFolder span {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.alert {
+    color: #fff;
+    display: flex;
+    box-shadow: 7px 7px var(--back_col);
+    position: fixed;
+    align-items: center;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 50%;
+    background-color: var(--main_col);
+    border: 5px solid var(--back_col);
+    border-radius: 20px;
+    transition: .7s;
+}
+.alert:hover {
+    box-shadow: -7px -7px var(--back_col);
+}
+.alert p {
+    font-size: 25px;
+    width: 100%;
+    padding-top: 30px; padding-bottom: 30px;
+    text-align: center;
+    background-color: var(--back_col);
+}
+.alert div {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+}
+.alert span {
+    font-size: 30px;
+    color: #fff;
+}
+.alert button {
+    width: 40px;
+    height: 40px;
+    background-color: var(--back_col);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+.alert button:hover {
+    color: var(--back_col);
+    border: 2px var(--back_col) solid;
+    background-color: var(--main_col);
+}
+.loadingWrapper {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main_col);
+}
+.loading {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background-color: #fff;
+    gap: 10px;
+    padding: 20px;
+    min-height: 10vh; min-width: 30vh;
+    border: 3px solid var(--main_col);
+    border-radius: 10px;
+}
+.loading img {
+    width: 40px; height: 40px;
+    align-self: center;
+}
+.loading p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.disabled {
+    background-color: #862e3a;
+    width: 20%;
+    height: 100%;
+    cursor: default;
+}
+.disabled:hover {
+    background-color: #862e3a;
+    border: none;
+    font-size: 15px;
+}
+.temporaryCol {
+    background-color: var(--main_focus);
+}
